@@ -161,7 +161,10 @@ function Comp1() {
         </div>
       </motion.div>
       <footer className="w-full mt-10 py-6 bg-gray-900 bg-opacity-70 text-center text-gray-400 text-sm z-10 relative">
-        <p className="mb-4">© 2025 Agustin Jimenez. Proyecto Demo</p>
+        <p className="mb-4">
+          © 2025 Agustin Jimenez. Proyecto Demo Imágenes NASA íntegramente con
+          reactjs
+        </p>
         <div className="flex justify-center space-x-6">
           {/* Facebook */}
           <a
