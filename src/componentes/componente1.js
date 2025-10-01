@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 function Comp1() {
   const [data, setData] = useState(null);
@@ -106,11 +107,11 @@ function Comp1() {
       </div>
 
       {/* Cabecera explicativa */}
-      <header className="relative z-10 text-center mb-6">
-        <h2 className="text-4xl font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 drop-shadow-lg">
+      <header className="relative z-10 text-center mb-10 space-y-2">
+        <h2 className="text-4xl font-bold leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 drop-shadow-lg">
           NASA Astronomy Picture of the Day
         </h2>
-        <p className="text-gray-300 mt-2">
+        <p className="text-gray-300">
           Explora diariamente imágenes asombrosas del espacio con su explicación
           oficial.
         </p>
@@ -119,7 +120,7 @@ function Comp1() {
 
       {/* Contenido con parallax */}
       <motion.div style={{ y }} className="relative z-10 text-center">
-        <div className="bg-gray-900 bg-opacity-70 p-6 rounded-xl shadow-2xl w-full max-w-4xl transform transition hover:scale-105 duration-300">
+        <div className="bg-blue-900 bg-opacity-50 p-6 rounded-xl shadow-2xl w-full max-w-4xl transform transition hover:scale-105 duration-300">
           {data.media_type === "image" ? (
             <img
               src={data.url}
@@ -159,16 +160,37 @@ function Comp1() {
           </button>
         </div>
       </motion.div>
-      <footer className="w-full mt-10 py-4 bg-gray-900 bg-opacity-70 text-center text-gray-400 text-sm z-10 relative">
-        © 2025 Agustin Jimenez.{" "}
-        <a
-          href="https://github.com/AgustinJimenez"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-400 hover:text-purple-500 transition-colors"
-        >
-          Mi GitHub
-        </a>
+      <footer className="w-full mt-10 py-6 bg-gray-900 bg-opacity-70 text-center text-gray-400 text-sm z-10 relative">
+        <p className="mb-4">© 2025 Agustin Jimenez. Proyecto Demo</p>
+        <div className="flex justify-center space-x-6">
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/share/1DmfoTaAs5/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-blue-500 transition-colors"
+          >
+            <i className="fab fa-facebook-f text-xl"></i>
+          </a>
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/agustín-giménez-llamas-780067380"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-blue-400 transition-colors"
+          >
+            <i className="fab fa-linkedin-in text-xl"></i>
+          </a>
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/agudev25"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-pink-500 transition-colors"
+          >
+            <i className="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
       </footer>
     </div>
   );
