@@ -18,6 +18,7 @@ function Comp1() {
 
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
+      <h1>Lo que tenemos que ver en esta web</h1>
       <h1>{data.title}</h1>
       <img src={data.url} alt={data.title} style={{ maxWidth: "80%" }} />
       <p>{data.explanation}</p>
